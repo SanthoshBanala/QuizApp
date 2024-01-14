@@ -5,6 +5,15 @@ data class QuizModel(
     val title: String,
     val subtitle:String,
     val time: String,
+    val QuestionList:List<Questionmodel>
 ){
-    constructor(): this(id="", title="", subtitle="", time="")
+    constructor(): this(id="", title="", subtitle="", time="", emptyList())
+}
+
+data class Questionmodel(
+    val question:String,
+    val options:List<String>,
+    val correct:String,
+){
+    constructor(): this("", emptyList(),"")
 }
